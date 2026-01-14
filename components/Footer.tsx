@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -12,7 +11,7 @@ export default function Footer() {
   };
 
   const handleContactClick = () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSeeermsNFjHABbQ4fdzrgqrwT_HHzD08yw1IEALFhJ70slyHQ/viewform?usp=dialog', '_blank');
+    scrollToSection('contact');
   };
 
   return (
@@ -57,7 +56,17 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
-          <p>&copy; 2024 BIG FOREST TRADING LP. All rights reserved.</p>
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+            <p>&copy; 2024 BIG FOREST TRADING LP. All rights reserved.</p>
+            <a 
+              href="https://readdy.ai/?origin=logo" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              Made with Readdy
+            </a>
+          </div>
         </div>
       </div>
     </footer>

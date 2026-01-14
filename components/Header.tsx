@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   const handleContactClick = () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSeeermsNFjHABbQ4fdzrgqrwT_HHzD08yw1IEALFhJ70slyHQ/viewform?usp=dialog', '_blank');
+    scrollToSection('contact');
     setIsMenuOpen(false);
   };
 
