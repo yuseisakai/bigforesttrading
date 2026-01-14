@@ -1,0 +1,21 @@
+1:"$Sreact.fragment"
+2:I[5060,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"default"]
+3:I[98740,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"default"]
+4:I[81059,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"ClientPageRoot"]
+5:I[3321,["/_next/static/chunks/8005d3fefc11dbbb.js"],"default"]
+8:I[22763,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"OutletBoundary"]
+9:"$Sreact.suspense"
+b:I[22763,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"ViewportBoundary"]
+d:I[22763,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"MetadataBoundary"]
+f:I[27469,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"default"]
+:HL["/_next/static/chunks/eae5b00499696782.css","style"]
+:HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/a624dffa201843ff-s.p.91936907.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"Rprl87q6ySlFQP6-hDmQW","c":["","privacy"],"q":"","i":false,"f":[[["",{"children":["privacy",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/eae5b00499696782.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable pacifico_9f4c63a3-module__VCg86W__variable antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center h-screen text-center px-4","children":[["$","h1",null,{"className":"text-5xl md:text-5xl font-semibold text-gray-100","children":"404"}],["$","h1",null,{"className":"text-2xl md:text-3xl font-semibold mt-6","children":"This page has not been generated"}],["$","p",null,{"className":"mt-4 text-xl md:text-2xl text-gray-500","children":"Tell me what you would like on this page"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","$L4",null,{"Component":"$5","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@6","$@7"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/8005d3fefc11dbbb.js","async":true,"nonce":"$undefined"}]],["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Le"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$f",[]],"S":true}
+6:{}
+7:"$0:f:0:1:1:children:1:children:0:props:children:0:props:serverProvidedParams:params"
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+10:I[56221,["/_next/static/chunks/4dc956928b2639ff.js","/_next/static/chunks/94558f702c74dd34.js"],"IconMark"]
+a:null
+e:[["$","title","0",{"children":"BIG FOREST TRADING"}],["$","meta","1",{"name":"description","content":"日本とタイ間の食品・食材の卸と販路開拓を支援します。"}],["$","link","2",{"rel":"icon","href":"/icon.png"}],["$","$L10","3",{}]]

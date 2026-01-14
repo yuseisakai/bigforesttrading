@@ -1,0 +1,3 @@
+module.exports=[80478,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(70521);a.n(d("[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},30469,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(70521);a.n(d("[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/global-error.js"))},44532,a=>{"use strict";a.i(80478);var b=a.i(30469);a.n(b)}];
+
+//# sourceMappingURL=0567b_next_dist_client_components_builtin_global-error_983f190f.js.map
