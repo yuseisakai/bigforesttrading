@@ -1,0 +1,11 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/0567b_next_dist_364c17c4._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__97bc5679._.js")
+R.c("server/chunks/ssr/0567b_next_dist_906f6b35._.js")
+R.c("server/chunks/ssr/[externals]__7f148858._.js")
+R.c("server/chunks/ssr/Downloads_bigforesttrading_f75dcd22._.js")
+R.c("server/chunks/ssr/Downloads_bigforesttrading_app_not-found_tsx_f3aca6c9._.js")
+R.c("server/chunks/ssr/0567b_next_dist_client_components_058bb2e8._.js")
+R.c("server/chunks/ssr/6c7f9_bigforesttrading__next-internal_server_app__not-found_page_actions_bc251a05.js")
+R.m("[project]/Downloads/bigforesttrading/node_modules/next/dist/esm/build/templates/app-page.js?page=/_not-found/page { MODULE_0 => \"[project]/Downloads/bigforesttrading/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_1 => \"[project]/Downloads/bigforesttrading/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_2 => \"[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_3 => \"[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_4 => \"[project]/Downloads/bigforesttrading/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)\" } [app-rsc] (ecmascript)")
+module.exports=R.m("[project]/Downloads/bigforesttrading/node_modules/next/dist/esm/build/templates/app-page.js?page=/_not-found/page { MODULE_0 => \"[project]/Downloads/bigforesttrading/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_1 => \"[project]/Downloads/bigforesttrading/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_2 => \"[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_3 => \"[project]/Downloads/bigforesttrading/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)\", MODULE_4 => \"[project]/Downloads/bigforesttrading/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)\" } [app-rsc] (ecmascript)").exports

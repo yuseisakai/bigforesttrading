@@ -1,0 +1,3 @@
+module.exports=[34979,a=>{"use strict";var b=a.i(67072);function c({children:a}){return(0,b.jsx)("html",{lang:"ja",children:(0,b.jsxs)("body",{className:"antialiased",children:[(0,b.jsx)("div",{className:"grain-overlay","aria-hidden":"true"}),a]})})}a.s(["default",()=>c,"metadata",0,{title:"BIG FOREST TRADING | 日本産水産物の輸出・海外販路開拓",description:"BIG FOREST TRADINGは、日本の高品質な水産物をタイ・東南アジアへ輸出。現地での販路開拓から販売支援まで一気通貫でサポートいたします。",keywords:"水産物輸出, 海外販路開拓, タイ輸出, 日本食材, 鮮魚輸出, 冷凍魚, 東南アジア",openGraph:{title:"BIG FOREST TRADING | 日本産水産物の輸出・海外販路開拓",description:"日本の高品質な水産物を、現地で売れる形に。品質×現地販売力×輸出運用力で、確実な成果をお約束します。",type:"website",locale:"ja_JP"},icons:{icon:"/icon.png"}}])}];
+
+//# sourceMappingURL=Downloads_bigforesttrading_app_layout_tsx_66547832._.js.map
