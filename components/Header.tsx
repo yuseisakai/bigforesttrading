@@ -1,124 +1,126 @@
-
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const handleContactClick = () => {
-    scrollToSection('contact');
-    setIsMenuOpen(false);
-  };
+  const navItems = [
+    { label: 'ホーム', href: '/' },
+    { label: '事業内容', href: '/#services' },
+    { label: '強み', href: '/#strengths' },
+    { label: '会社概要', href: '/company' },
+    { label: 'お問い合わせ', href: '/#contact' },
+  ];
 
   return (
-    <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 sm:py-6">
-          <div className="flex items-center">
-            <Link href="/" className="text-[#0F3E4D] font-sans text-lg sm:text-xl lg:text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
-              BIG FOREST TRADING
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-[#0A1628]/95 backdrop-blur-md shadow-lg py-3'
+          : 'bg-transparent py-5'
+      }`}
+    >
+      <div className="container-custom">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="group">
+            <div className="flex flex-col">
+              <span className="text-white text-sm tracking-[0.2em] font-light group-hover:text-[#C4A052] transition-colors">
+                BIG FOREST
+              </span>
+              <span className="text-[#C4A052] text-[10px] tracking-[0.15em]">
+                TRADING
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-white/80 hover:text-[#C4A052] text-sm tracking-wider transition-colors duration-300 link-underline"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button - Desktop */}
+          <div className="hidden lg:block">
+            <Link
+              href="/#contact"
+              className="bg-[#C4A052] text-white px-6 py-2.5 text-sm tracking-wider hover:bg-[#D4B872] transition-all duration-300 inline-block"
+            >
+              お問い合わせ
             </Link>
           </div>
 
-          {/* デスクトップナビゲーション */}
-          <nav className="hidden lg:flex space-x-6 xl:space-x-8">
-            <button 
-              onClick={() => scrollToSection('business-overview')} 
-              className="text-sm xl:text-base text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer whitespace-nowrap"
-            >
-              事業概要
-            </button>
-            <button 
-              onClick={() => scrollToSection('strengths')} 
-              className="text-sm xl:text-base text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer whitespace-nowrap"
-            >
-              強み
-            </button>
-            <button 
-              onClick={() => scrollToSection('services')} 
-              className="text-sm xl:text-base text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer whitespace-nowrap"
-            >
-              サービス
-            </button>
-            <button 
-              onClick={() => scrollToSection('achievements')} 
-              className="text-sm xl:text-base text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer whitespace-nowrap"
-            >
-              実績
-            </button>
-            <button 
-              onClick={() => scrollToSection('company')} 
-              className="text-sm xl:text-base text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer whitespace-nowrap"
-            >
-              会社情報
-            </button>
-          </nav>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 group"
+            aria-label="メニュー"
+          >
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+              }`}
+            />
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? 'opacity-0' : ''
+              }`}
+            />
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+              }`}
+            />
+          </button>
+        </div>
+      </div>
 
-          <div className="flex items-center space-x-4">
-            <button 
-              onClick={handleContactClick}
-              className="bg-[#0F3E4D] text-white px-3 sm:px-4 lg:px-6 py-2 rounded-full hover:bg-[#0A5C63] transition-colors cursor-pointer text-xs sm:text-sm lg:text-base whitespace-nowrap"
+      {/* Mobile Menu */}
+      <div
+        className={`lg:hidden absolute top-full left-0 right-0 bg-[#0A1628]/98 backdrop-blur-md transition-all duration-500 overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <nav className="container-custom py-6">
+          <div className="flex flex-col gap-4">
+            {navItems.map((item, index) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white/80 hover:text-[#C4A052] text-base tracking-wider py-2 border-b border-white/10 transition-colors"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href="/#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="bg-[#C4A052] text-white px-6 py-3 text-center text-sm tracking-wider mt-4"
             >
               お問い合わせ
-            </button>
-
-            {/* モバイルメニューボタン */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden w-8 h-8 flex items-center justify-center"
-            >
-              <i className={`${isMenuOpen ? 'ri-close-line' : 'ri-menu-line'} text-xl text-[#0F3E4D]`} />
-            </button>
+            </Link>
           </div>
-        </div>
-
-        {/* モバイルメニュー */}
-        {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <nav className="flex flex-col space-y-3">
-              <button 
-                onClick={() => scrollToSection('business-overview')} 
-                className="text-left text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer py-2"
-              >
-                事業概要
-              </button>
-              <button 
-                onClick={() => scrollToSection('strengths')} 
-                className="text-left text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer py-2"
-              >
-                強み
-              </button>
-              <button 
-                onClick={() => scrollToSection('services')} 
-                className="text-left text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer py-2"
-              >
-                サービス
-              </button>
-              <button 
-                onClick={() => scrollToSection('achievements')} 
-                className="text-left text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer py-2"
-              >
-                実績
-              </button>
-              <button 
-                onClick={() => scrollToSection('company')} 
-                className="text-left text-gray-700 hover:text-[#0F3E4D] transition-colors cursor-pointer py-2"
-              >
-                会社情報
-              </button>
-            </nav>
-          </div>
-        )}
+        </nav>
       </div>
     </header>
   );

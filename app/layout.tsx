@@ -1,28 +1,16 @@
-
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
 
-const pacifico = Pacifico({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-pacifico',
-})
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "BIG FOREST TRADING",
-  description: "日本とタイ間の食品・食材の卸と販路開拓を支援します。",
+  title: "BIG FOREST TRADING | 日本産水産物の輸出・海外販路開拓",
+  description: "BIG FOREST TRADINGは、日本の高品質な水産物をタイ・東南アジアへ輸出。現地での販路開拓から販売支援まで一気通貫でサポートいたします。",
+  keywords: "水産物輸出, 海外販路開拓, タイ輸出, 日本食材, 鮮魚輸出, 冷凍魚, 東南アジア",
+  openGraph: {
+    title: "BIG FOREST TRADING | 日本産水産物の輸出・海外販路開拓",
+    description: "日本の高品質な水産物を、現地で売れる形に。品質×現地販売力×輸出運用力で、確実な成果をお約束します。",
+    type: "website",
+    locale: "ja_JP",
+  },
   icons: {
     icon: '/icon.png',
   },
@@ -34,10 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
-      >
+    <html lang="ja">
+      <body className="antialiased">
+        <div className="grain-overlay" aria-hidden="true" />
         {children}
       </body>
     </html>
