@@ -52,8 +52,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
-              日本の高品質な水産物を、タイ・東南アジアへ。
-              調達から販売まで一気通貫でサポートいたします。
+              日本の美味しさを、海外で売れる力に。
+              日本産水産物の輸出と海外販路づくりを支えます。
             </p>
 
             {/* Contact Info */}

@@ -4,15 +4,14 @@ import { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Image URLs from original site
 const IMAGES = {
-  hero: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/1e45a15a8e2d0049ed4abec24ca9883c.png',
-  fish1: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/d0d53ae08fffd99db13c27822c7c6276.png',
-  fish2: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/46638865477cf08728037441cd347233.png',
-  fish3: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/ca924c58b3899a4f32f1d42111f0e290.png',
-  quality: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/0791dec373d1d6857a4894148f2e5106.png',
-  sales: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/71682286fdcfc8046a74e80b77ce2bf6.png',
-  thailand: 'https://static.readdy.ai/image/94598d06be82172b82d4bd3a520590f4/66fa2039e6fbcbaf28910e798fe48a2d.png',
+  hero: '/images/fresh-seafood-market.png',
+  fish1: '/images/fresh-seafood-market.png',
+  fish2: '/images/cold-chain-quality.png',
+  fish3: '/images/overseas-market-planning.png',
+  quality: '/images/cold-chain-quality.png',
+  sales: '/images/overseas-market-planning.png',
+  logistics: '/images/air-cargo-logistics.png',
 };
 
 function useIntersectionObserver() {
@@ -58,7 +57,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${IMAGES.hero}')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/80 via-[#0A1628]/70 to-[#0A1628]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/85 via-[#0A1628]/62 to-[#0A1628]/20" />
 
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-32 h-32 border border-[#C4A052]/20 rotate-45 animate-float" />
@@ -69,21 +68,21 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             {/* Tagline */}
             <p className="text-[#C4A052] text-sm tracking-[0.3em] mb-6 opacity-0 animate-fade-in delay-100">
-              JAPANESE SEAFOOD EXPORT
+              JAPANESE TASTE, READY FOR OVERSEAS MARKETS
             </p>
 
             {/* Main Heading */}
             <h1 className="font-mincho text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight opacity-0 animate-fade-in-up delay-200">
-              <span className="text-shadow">良いものを</span>
+              <span className="text-shadow">日本の美味しさを、</span>
               <br />
-              <span className="text-[#C4A052] text-shadow">必ず売り切る。</span>
+              <span className="text-[#C4A052] text-shadow">海外で売れる力に。</span>
             </h1>
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in-up delay-400">
-              日本の高品質な水産物を、現地で"売れる形"に。
+              産地で育まれた確かな品質を、現地の食文化や流通に合わせて丁寧に届ける。
               <br className="hidden sm:block" />
-              品質×現地販売力×輸出運用力で、確実な成果をお約束します。
+              日本産水産物の輸出と海外販路づくりを支えます。
             </p>
 
             {/* CTA Buttons */}
@@ -92,13 +91,13 @@ export default function Home() {
                 onClick={scrollToContact}
                 className="btn-primary text-base"
               >
-                輸出・販路のご相談
+                輸出・販路の相談をする
               </button>
               <button
                 onClick={scrollToContact}
                 className="btn-secondary text-white border-white hover:bg-white hover:text-[#0A1628] text-base"
               >
-                お見積りを依頼
+                取り組みを相談する
               </button>
             </div>
           </div>
@@ -117,7 +116,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <p className="text-[#C4A052] text-sm tracking-[0.2em] mb-3 reveal opacity-0">BUSINESS</p>
             <h2 className="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] decorative-line reveal opacity-0">
-              事業内容
+              事業概要
             </h2>
           </div>
 
@@ -142,20 +141,19 @@ export default function Home() {
             {/* Content */}
             <div className="reveal opacity-0">
               <h3 className="font-mincho text-2xl sm:text-3xl font-bold text-[#0A1628] mb-6">
-                日本産水産物の
-                <span className="text-[#C4A052]">輸出・販路開拓</span>
+                日本の食材を、
+                <span className="text-[#C4A052]">海外で選ばれる形へ</span>
               </h3>
               <div className="space-y-4 text-[#374151] leading-relaxed">
                 <p>
-                  BIG FOREST TRADINGは、日本の高品質な水産物をタイを中心とした東南アジアへ輸出しています。
+                  BIG FOREST TRADINGは、日本産の高品質な水産物をタイを中心とした東南アジアへ届けています。
                 </p>
                 <p>
-                  築地直送の最高級鮮魚から、独自の超低温冷凍技術（-60℃）による冷凍魚まで、
-                  厳選された水産物を現地の日本食レストランや小売店へお届けしています。
+                  市場や産地での調達、品質管理、輸出手続き、現地での販売設計まで、
+                  食材の魅力が伝わる流れを整えます。
                 </p>
                 <p>
-                  単なる輸出だけでなく、現地での販路開拓から継続的な販売支援まで、
-                  一気通貫でサポートいたします。
+                  品質だけでなく、現地の食文化や流通に合わせた届け方を大切にしています。
                 </p>
               </div>
 
@@ -163,7 +161,7 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-[#E8E8E8]">
                 <div className="text-center">
                   <p className="font-mincho text-3xl font-bold text-[#C4A052]">70+</p>
-                  <p className="text-sm text-[#6B7280] mt-1">供給店舗数</p>
+                  <p className="text-sm text-[#6B7280] mt-1">現地供給店舗</p>
                 </div>
                 <div className="text-center">
                   <p className="font-mincho text-3xl font-bold text-[#C4A052]">2t+</p>
@@ -171,7 +169,7 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <p className="font-mincho text-3xl font-bold text-[#C4A052]">10年+</p>
-                  <p className="text-sm text-[#6B7280] mt-1">東南アジア実績</p>
+                  <p className="text-sm text-[#6B7280] mt-1">東南アジア経験</p>
                 </div>
               </div>
             </div>
@@ -194,40 +192,52 @@ export default function Home() {
               {
                 icon: 'ri-ship-line',
                 title: '水産物輸出',
-                description: '築地直送の鮮魚から超低温冷凍魚まで、高品質な日本産水産物をタイへ輸出。複雑な輸出手続きも一括対応いたします。',
-                features: ['築地直送', '超低温冷凍（-60℃）', '輸出手続き代行'],
+                description: '市場や産地から選び抜いた鮮魚と、超低温管理による冷凍魚を、用途に合わせてご提案します。',
+                features: ['市場・産地調達', '超低温管理', '用途別提案'],
+                image: IMAGES.fish1,
               },
               {
-                icon: 'ri-store-3-line',
+                icon: 'ri-truck-line',
+                title: '輸出サポート',
+                description: '輸出書類、品質管理、物流手配まで、海外へ届けるために必要な実務を一つずつ整えます。',
+                features: ['輸出手続き', '品質管理', '物流手配'],
+                image: IMAGES.quality,
+              },
+              {
+                icon: 'ri-global-line',
                 title: '販路開拓支援',
-                description: 'タイでの5年、東南アジア全体での10年の実績を活かし、現地のネットワークを通じて最適な販売先を開拓します。',
-                features: ['現地市場調査', '販売先マッチング', 'プロモーション支援'],
-              },
-              {
-                icon: 'ri-customer-service-2-line',
-                title: '継続販売サポート',
-                description: '販売して終わりではなく、継続的なフォローアップで安定した取引関係の構築をサポートいたします。',
-                features: ['定期フォロー', '在庫管理支援', '現地対応'],
+                description: '現地ネットワークと販売経験を活かし、商品ごとの魅力が伝わる販路づくりを支援します。',
+                features: ['現地理解', '販促企画', 'ネットワーク'],
+                image: IMAGES.sales,
               },
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-[#122541] p-8 rounded-sm card-hover reveal opacity-0"
+                className="bg-[#122541] rounded-sm card-hover reveal opacity-0 overflow-hidden"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 bg-[#C4A052]/10 flex items-center justify-center mb-6">
-                  <i className={`${service.icon} text-3xl text-[#C4A052]`} />
+                <div className="image-zoom overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
-                <h3 className="font-mincho text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-white/80">
-                      <span className="w-1.5 h-1.5 bg-[#C4A052] rounded-full" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-[#C4A052]/10 flex items-center justify-center mb-6">
+                    <i className={`${service.icon} text-3xl text-[#C4A052]`} />
+                  </div>
+                  <h3 className="font-mincho text-xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed mb-6">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-white/80">
+                        <span className="w-1.5 h-1.5 bg-[#C4A052] rounded-full" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -249,22 +259,22 @@ export default function Home() {
               {
                 number: '01',
                 title: '仕入・品質管理',
-                description: '高級店専門の鮮魚問屋ネットワークとプロ目利き師による厳選。最新設備での急速凍結・-60℃保管により、鮮度と品質を徹底管理しています。',
-                image: IMAGES.quality,
+                description: '高級店向けの鮮魚問屋ネットワークと、経験ある目利きによる選別。急速凍結・-60℃保管を組み合わせ、品質を丁寧に守ります。',
+                image: IMAGES.fish1,
                 reverse: false,
               },
               {
                 number: '02',
-                title: '販売・営業力',
-                description: 'タイでの日本食品販売歴5年、東南アジア全体で10年の実績。自治体・大手メーカー販促支援で培った市場理解と、高い営業力・交渉力が強みです。',
+                title: '現地理解・販路設計',
+                description: 'タイでの日本食品販売歴5年、東南アジア全体で10年の経験。現地の食文化、価格感、流通に合わせた届け方を設計します。',
                 image: IMAGES.sales,
                 reverse: true,
               },
               {
                 number: '03',
                 title: '輸出・物流',
-                description: '複数国向け輸出による価格交渉力と、空輸・冷凍輸送の柔軟な対応力。輸出手続きから現地配送まで一括対応いたします。',
-                image: IMAGES.thailand,
+                description: '複数国向けの輸出経験をもとに、空輸・冷凍輸送・輸出手続きを一括で支援。鮮度と安定供給の両立を目指します。',
+                image: IMAGES.logistics,
                 reverse: false,
               },
             ].map((strength, index) => (
@@ -313,10 +323,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 reveal opacity-0">
             {[
-              'タイ国内のレストラン・小売店約70店舗に納品',
+              'タイ国内のレストラン・小売店約70店舗へ供給',
               '月間取扱量：2トン以上',
-              '自治体・大手メーカー向け販促支援案件を多数実施',
-              '明太子メーカーのタイ営業代行',
+              '自治体・大手メーカー向けプロモーション支援を実施',
+              '明太子メーカーのタイ展開を支援',
               '青森県りんご対策協議会のタイプロモーション運営',
               '福井県産食品の2024年度タイプロモーション',
               '高級冷凍焼き芋ブランドの店舗運営及び卸販売',
@@ -342,7 +352,7 @@ export default function Home() {
             <h2 className="font-mincho text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] decorative-line reveal opacity-0">
               オペレーション
             </h2>
-            <p className="text-[#6B7280] mt-6 reveal opacity-0">調達から販売まで一気通貫のプロセス</p>
+            <p className="text-[#6B7280] mt-6 reveal opacity-0">調達から現地で届くまで、工程を一つずつ確かに。</p>
           </div>
 
           <div className="relative">
@@ -351,10 +361,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal opacity-0">
               {[
-                { step: '01', title: '市場・産直仕入', icon: 'ri-shopping-cart-line', desc: '築地市場での目利きと産地直送による調達' },
-                { step: '02', title: '集荷・品質管理', icon: 'ri-shield-check-line', desc: '-60℃超低温冷凍による品質保持' },
-                { step: '03', title: '輸出手続き', icon: 'ri-plane-line', desc: '書類作成から通関までスムーズに対応' },
-                { step: '04', title: '海外販売', icon: 'ri-store-3-line', desc: '現地ネットワークを活用した販売' },
+                { step: '01', title: '市場・産直仕入', icon: 'ri-shopping-cart-line', desc: '市場での目利きと産地直送により、用途に合う水産物を調達' },
+                { step: '02', title: '集荷・品質管理', icon: 'ri-shield-check-line', desc: '-60℃超低温冷凍技術を活用し、品質保持と管理体制を整備' },
+                { step: '03', title: '輸出手続き', icon: 'ri-plane-line', desc: '輸出書類作成から通関まで、海外へ届ける実務を支援' },
+                { step: '04', title: '現地で届ける', icon: 'ri-store-3-line', desc: '現地ネットワークを活用し、継続的に選ばれる流れをつくる' },
               ].map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="relative mb-8">
@@ -385,26 +395,25 @@ export default function Home() {
 
             <div className="reveal opacity-0">
               <h3 className="font-mincho text-2xl sm:text-3xl text-[#C4A052] mb-10">
-                泥臭く、誠実に、確実に。
+                産地の想いを、現地の食卓へ。
               </h3>
 
               <div className="text-white/80 leading-loose space-y-6 text-left">
                 <p>
-                  私たちBIG FOREST TRADINGは、ただの輸出会社ではありません。
-                  東南アジアを中心に年間約10億円規模の商材を扱い、営業代行から自社商材の販売まで、現地で培った実績を積み重ねてきました。
+                  私たちBIG FOREST TRADINGは、日本の食材が持つ美味しさと背景を、海外の市場で自然に受け入れられる形へ整える会社です。
+                  東南アジアを中心に商材を扱い、現地での販売支援から自社商材の展開まで、実務を通じて経験を積み重ねてきました。
                 </p>
                 <p>
-                  これまで私自身、多くの失敗や悔しい経験をしてきました。
-                  市場に合わない商品、理解不足、営業力の未熟さ…。それでも諦めることなく、現地で顧客を回り、店頭で販売し、消費者の声に耳を傾け、数字を作ってきました。
+                  海外で選ばれるためには、品質だけでなく、現地の食文化、価格感、流通、伝え方を丁寧に理解することが欠かせません。
+                  私たちは現地のお客様の声に耳を傾けながら、商品ごとに適した届け方を考えます。
                 </p>
                 <p>
-                  だからこそ、私たちは「本当に現地で売り切るために必要なこと」を理解しています。
-                  スマートではない部分もありますが、それが私たちの強みです。
-                  華やかさよりも、泥臭く、誠実に、一つひとつの案件に向き合い、必ず成果を出す。
+                  産地で大切に育まれた食材を、ただ輸出するだけで終わらせない。
+                  品質を守り、背景を伝え、継続して手に取っていただける関係をつくることを大切にしています。
                 </p>
                 <p>
                   「タイで売るなら」「東南アジアで展開するなら」
-                  ——そう言っていただける存在になることが、私たちBIG FOREST TRADINGの使命であり、約束です。
+                  そう思い出していただける存在になることが、私たちBIG FOREST TRADINGの目指す姿です。
                 </p>
               </div>
 
@@ -427,7 +436,7 @@ export default function Home() {
               お問い合わせ
             </h2>
             <p className="text-[#6B7280] mb-12 reveal opacity-0">
-              輸出販路のご相談はこちらから。お気軽にお問い合わせください。
+              商品の輸出、販路づくり、現地展開について、お気軽にお問い合わせください。
             </p>
 
             <div className="bg-white p-8 sm:p-12 rounded-sm shadow-lg reveal opacity-0">
